@@ -1,0 +1,5 @@
+extend = [
+    { path = "./trunk_server.toml" },
+    { path = "./cargo_plugins.toml" },
+    { path = "./rust_toolchain.toml" },
+]

@@ -1,0 +1,11 @@
+[tasks.ensure-trunk]
+description = "Ensure trunk is installed"
+script = '''
+if ! command -v trunk &> /dev/null
+then
+    echo "trunk not found, installing..."
+    cargo install trunk
+else
+    echo "trunk is already installed"
+fi
+'''

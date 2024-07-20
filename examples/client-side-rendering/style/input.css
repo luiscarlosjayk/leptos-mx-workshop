@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root,
+	html {
+		scroll-timeline: --page-scroll block;
+		@apply font-mono;
+	}
+
+	#progress {
+		animation-timeline: --page-scroll;
+	}
+
+	svg {
+		@apply w-svg h-svg;
+	}
+}

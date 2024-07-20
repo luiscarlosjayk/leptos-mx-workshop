@@ -1,0 +1,12 @@
+[env]
+CLIENT_PROCESS_NAME = "trunk"
+
+[tasks.build]
+command = "trunk"
+args = ["build"]
+
+[tasks.start]
+command = "trunk"
+condition = { env_true = ["USE_TRUNK"] }
+args = ["serve", "${@}"]
+dependencies = ["ensure-trunk", "ensure-nightly"]

@@ -1,0 +1,16 @@
+[tasks.ensure-nightly]
+condition = { env_true = ["USE_NIGHTLY"] }
+description = "Ensure Rust nightly is installed and set for the project"
+script = '''
+if ! rustup toolchain list | grep -q nightly; then
+    echo "Rust nightly not found, installing..."
+    rustup toolchain install nightly
+fi
+
+if ! rustup override list | grep -q $(pwd); then
+    echo "Setting Rust nightly for this project..."
+    rustup override set nightly
+else
+    echo "Rust nightly is already set for this project"
+fi
+'''
