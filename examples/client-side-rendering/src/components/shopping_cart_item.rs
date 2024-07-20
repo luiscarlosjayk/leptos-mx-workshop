@@ -9,7 +9,7 @@ pub fn ShoppingCartItem() -> impl IntoView {
             <div>
                 <img
                     class="w-full"
-                    src="assets/chair-1.png"
+                    src="/assets/chair-1.png"
                 />
             </div>
             <div>"Chair 1"</div>

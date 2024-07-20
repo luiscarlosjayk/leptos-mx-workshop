@@ -1,4 +1,5 @@
 use leptos::*;
+use leptos_router::*;
 
 #[component]
 pub fn ProductCard() -> impl IntoView {
@@ -6,13 +7,17 @@ pub fn ProductCard() -> impl IntoView {
         <div
             class="bg-orange-50 p-5 rounded-3xl"
         >
-            <img
-                class="drop-shadow-4xl w-11/12"
-                src="assets/chair-1.png"
-            />
+            <A href="/products/1">
+                <img
+                    class="drop-shadow-4xl w-11/12"
+                    src="/assets/chair-1.png"
+                />
+            </A>
             <h2
                 class="font-medium text-lg"
-            >"Chair"</h2>
+            >
+                <A href="/products/1">"Chair"</A>
+            </h2>
             <div
                 class="text-sm tracking-widest"
             >"$ 200"</div>
